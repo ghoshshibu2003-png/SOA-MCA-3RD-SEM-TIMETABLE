@@ -187,67 +187,48 @@ weeklyBtn.addEventListener("click", () => {
 
 downloadBtn.addEventListener("click", () => {
   const sec = sectionSelect.value;
-  if (!sec) return;
+  if (!sec || !weeklyTable.innerHTML.trim()) {
+    alert("Please view weekly timetable before downloading.");
+    return;
+  }
 
   const table = weeklyTable.outerHTML;
   const subjectList = subjectTeacherList.outerHTML;
 
-  const style = `
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-      }
-      h2, h3 {
-        text-align: center;
-        margin: 10px 0;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      }
-      th, td {
-        border: 1px solid black;
-        padding: 6px;
-        text-align: center;
-        font-size: 14px;
-      }
-      th {
-        background: #4f46e5;
-        color: white;
-      }
-      ul {
-        margin-top: 10px;
-        font-size: 14px;
-      }
-      li {
-        margin: 3px 0;
-      }
-    </style>
-  `;
-
   const html = `
-    <html>
-    <head>
-      <title>${sec} Weekly Timetable</title>
-      ${style}
-    </head>
-    <body>
-      <h2>${sec} Weekly Timetable</h2>
-      ${table}
-      <h3>Subject Code – Subject – Teacher</h3>
-      ${subjectList}
-    </body>
-    </html>
-  `;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${sec} Weekly Timetable</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    h2, h3 { text-align: center; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { border: 1px solid #000; padding: 6px; text-align: center; }
+    th { background: #4f46e5; color: #fff; }
+    ul { margin-top: 12px; padding-left: 18px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h2>${sec} Weekly Timetable</h2>
+  ${table}
+  <h3>Subject Code – Subject – Teacher</h3>
+  ${subjectList}
+</body>
+</html>
+`;
 
-  const blob = new Blob([html], { type: "text/html" });
+  const blob = new Blob([html], { type: "text/html;charset=utf-8" });
   const url = URL.createObjectURL(blob);
+
   const a = document.createElement("a");
   a.href = url;
   a.download = `${sec}_Weekly_Timetable.html`;
+  document.body.appendChild(a);
   a.click();
+  document.body.removeChild(a);
+
   URL.revokeObjectURL(url);
 });
-
