@@ -31,7 +31,7 @@ const SECTION_DATA = {
       Thursday:  ["PROJECT","PROJECT","MLUP","DDA","CS","X","X","X","X","X"],
       Friday:    ["PROJECT","PROJECT","CS","MLUP","DDA","X","X","X","X","X"],
       Saturday:  ["X","PROJECT","PROJECT","SEMINAR","SEMINAR","X","X","X","X","X"],
-      Sunday:    ["Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday"]
+      Sunday:    Array(10).fill("Holiday")
     },
     teachers: [
       "MADHUSMITA SAHU",
@@ -52,7 +52,7 @@ const SECTION_DATA = {
       Thursday:  ["X","X","X","X","X","X","MLUP","DDA","PROJECT","PROJECT"],
       Friday:    ["X","X","X","X","X","X","DDA","CS","SEMINAR","SEMINAR"],
       Saturday:  ["X","X","X","X","X","X","CS","MLUP","PROJECT","PROJECT"],
-      Sunday:    ["Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday"]
+      Sunday:    Array(10).fill("Holiday")
     },
     teachers: [
       "MADHUSMITA SAHU",
@@ -73,7 +73,7 @@ const SECTION_DATA = {
       Thursday:  ["X","X","X","X","X","X","SEMINAR","SEMINAR","PROJECT","PROJECT"],
       Friday:    ["X","X","X","X","X","X","MLUP","CS","DDA","X"],
       Saturday:  ["X","X","X","X","X","X","SEMINAR","SEMINAR","PROJECT","PROJECT"],
-      Sunday:    ["Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday"]
+      Sunday:    Array(10).fill("Holiday")
     },
     teachers: [
       "MOHINIKANTA SAHOO",
@@ -94,7 +94,7 @@ const SECTION_DATA = {
       Thursday:  ["PROJECT","PROJECT","MLUP","DDA","CS","X","X","X","X","X"],
       Friday:    ["PROJECT","PROJECT","CS","DDA","MLUP","X","X","X","X","X"],
       Saturday:  ["PROJECT","PROJECT","DDA","MLUP","CS","X","X","X","X","X"],
-      Sunday:    ["Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday"]
+      Sunday:    Array(10).fill("Holiday")
     },
     teachers: [
       "MOHINIKANTA SAHOO",
@@ -115,7 +115,7 @@ const SECTION_DATA = {
       Thursday:  ["X","X","X","X","X","X","MLUP","CS","DDA","X"],
       Friday:    ["X","X","X","X","X","X","SEMINAR","SEMINAR","PROJECT","PROJECT"],
       Saturday:  ["X","X","X","X","X","X","SEMINAR","SEMINAR","PROJECT","PROJECT"],
-      Sunday:    ["Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday","Holiday"]
+      Sunday:    Array(10).fill("Holiday")
     },
     teachers: [
       "MOHINIKANTA SAHOO",
