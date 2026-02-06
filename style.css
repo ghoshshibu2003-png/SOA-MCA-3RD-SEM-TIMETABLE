@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    padding: 20px;
+    color: #e5e7eb;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("SOA LOGO.jpeg") no-repeat center;
+    background-size: 38%;
+    opacity: 0.08;
+    z-index: -1;
+}
+
+.header {
+    text-align: center;
+    background: linear-gradient(135deg, #6366f1, #4338ca);
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(99,102,241,.35);
+}
+
+.section-box {
+    text-align: center;
+    margin: 30px 0;
+}
+
+select {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: none;
+    background: #1e293b;
+    color: #fff;
+    font-size: 16px;
+}
+
+.info {
+    text-align: center;
+    font-weight: 600;
+    color: #a5b4fc;
+}
+
+.card {
+    background: rgba(15,23,42,.75);
+    backdrop-filter: blur(12px);
+    padding: 18px;
+    border-radius: 18px;
+    margin-top: 25px;
+    box-shadow: 0 25px 60px rgba(0,0,0,.45);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 14px;
+    overflow-x: auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #fff;
+}
+
+td {
+    background: rgba(30,41,59,.85);
+}
+
+.btn-box {
+    text-align: center;
+    margin: 28px 0;
+}
+
+button {
+    padding: 12px 26px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.weekly-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 999px;
+}
+
+.contact-us {
+    margin-top: 30px;
+    padding: 18px;
+    background: linear-gradient(135deg, #1e293b, #020617);
+    color: #e5e7eb;
+    text-align: center;
+    border-radius: 18px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 25px 60px rgba(0,0,0,.5);
+}
+
+.contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-row a {
+    color: #a5b4fc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 14px;
+    }
+
+    th, td {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .weekly-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .download-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+.contact-row a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a5b4fc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact-row svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.contact-row a:hover {
+    color: #ffffff;
+}

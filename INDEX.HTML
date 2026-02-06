@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOA MCA Timetable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>🎓 SOA MCA Timetable</h1>
+    <p>Siksha ‘O’ Anusandhan Deemed to be University</p>
+    <p>Master of Computer Applications</p>
+</header>
+
+<div class="section-box">
+    <label>Select Section:</label>
+    <select id="section">
+        <option value="">-- Select --</option>
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+        <option value="C1">C1</option>
+    </select>
+</div>
+
+<div class="info">
+    <p id="today"></p>
+    <p id="room"></p>
+</div>
+
+<div class="card">
+    <h2>📅 Today Timetable</h2>
+    <table>
+        <tbody id="todayBody">
+            <tr><td>Select section</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="btn-box">
+    <button id="weeklyBtn" style="display:none;">View Weekly Timetable</button>
+</div>
+
+<div id="weeklyBox" class="card" style="display:none;">
+    <div class="weekly-header">
+        <h2>📆 Weekly Timetable</h2>
+        <button id="downloadBtn" class="download-btn">Download</button>
+    </div>
+
+    <table id="weeklyTable"></table>
+
+    <div class="subject-box">
+        <h3>📘 Subject Code – Subject – Teacher</h3>
+        <ul id="subjectTeacherList"></ul>
+    </div>
+</div>
+
+<footer class="contact-us">
+    <h2>📞 Contact Us</h2>
+
+    <div class="contact-row">
+        <a href="https://www.instagram.com/ghosh.shibu_/" target="_blank">
+            <svg viewBox="0 0 24 24">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+            </svg>
+            ghosh.shibu_
+        </a>
+
+        <a href="mailto:ghoshshibu2003@gmail.com">
+            <svg viewBox="0 0 24 24">
+                <path d="M2 4h20v16H2V4zm10 7 10-5H2l10 5zm0 2L2 8v10h20V8l-10 5z"/>
+            </svg>
+            ghoshshibu2003@gmail.com
+        </a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
